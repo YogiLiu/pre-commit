@@ -1,0 +1,30 @@
+- id: gofmt
+  name: gofmt
+  entry: gofmt -s -w
+  language: golang
+  types:
+    - go
+  description: Run gofmt on modified Go files
+  stages:
+    - pre-commit
+
+- id: prettier
+  name: prettier
+  entry: prettier --check
+  language: node
+  exclude: ^.+lock\.\w+$
+  types_or:
+    - javascript
+    - jsx
+    - ts
+    - tsx
+    - css
+    - html
+    - json
+    - yaml
+    - vue
+  description: Check code style with prettier
+  additional_dependencies:
+    - prettier@3.0.0
+  stages:
+    - pre-commit
