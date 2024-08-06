@@ -15,7 +15,7 @@
     - yaml
     - vue
   additional_dependencies:
-    - prettier@3.3.3
+    - prettier@~3.3.0
   minimum_pre_commit_version: 3.0.0
 
 - id: eslint
@@ -30,7 +30,7 @@
     - tsx
     - vue
   additional_dependencies:
-    - eslint@9.8.0
+    - eslint@~9.8.0
   minimum_pre_commit_version: 3.0.0
 
 - id: vitest
@@ -43,7 +43,7 @@
   files: ^.+\.(?:jsx?|tsx?|vue|css|html)$|package\.json$
   pass_filenames: false
   additional_dependencies:
-    - vitest@2.0.5
+    - vitest@~2.0.0
   minimum_pre_commit_version: 3.0.0
 
 - id: ruff-lint
@@ -55,7 +55,7 @@
     - python
     - pyi
   additional_dependencies:
-    - ruff~=0.5.6
+    - ruff~=0.5.0
   minimum_pre_commit_version: 3.0.0
 
 - id: ruff-fmt
@@ -67,7 +67,7 @@
     - python
     - pyi
   additional_dependencies:
-    - ruff~=0.5.6
+    - ruff~=0.5.0
   minimum_pre_commit_version: 3.0.0
 
 - id: mypy
@@ -79,7 +79,7 @@
     - python
     - pyi
   additional_dependencies:
-    - mypy~=1.11.1
+    - mypy~=1.11.0
   minimum_pre_commit_version: 3.0.0
 
 - id: pytest
@@ -92,5 +92,5 @@
   files: ^.+\.py$|pyproject\.toml$
   pass_filenames: false
   additional_dependencies:
-    - pytest~=8.3.2
+    - pytest~=8.3.0
   minimum_pre_commit_version: 3.0.0
