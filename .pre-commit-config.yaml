@@ -6,3 +6,8 @@ repos:
           - push
     repo: https://github.com/commitizen-tools/commitizen
     rev: v3.27.0
+
+  - hooks:
+      - id: prettier
+    repo: https://github.com/YogiLiu/pre-commit
+    rev: 0.1.0
