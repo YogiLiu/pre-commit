@@ -2,6 +2,8 @@
 
 My pre-commit hooks.
 
+![GitHub Tag](https://img.shields.io/github/v/tag/YogiLiu/pre-commit)
+
 ## Install hooks
 
 ```bash
