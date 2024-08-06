@@ -10,4 +10,4 @@ repos:
   - hooks:
       - id: prettier
     repo: https://github.com/YogiLiu/pre-commit
-    rev: 0.1.0
+    rev: 0.3.1
