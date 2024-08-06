@@ -17,7 +17,14 @@ repos:
   - repo: https://github.com/YogiLiu/pre-commit
     rev: 0.2.0
     hooks:
+      # Frontend
       - id: prettier
       - id: eslint
       - id: vitest
+
+      # Python
+      - id: ruff-lint
+      - id: ruff-fmt
+      - id: mypy
+      - id: pytest
 ```

@@ -1,5 +1,6 @@
 - id: prettier
   name: Prettier
+  description: Code Formatter for Frontend.
   entry: prettier --check
   language: node
   exclude: ^.+lock\.\w+$
@@ -13,12 +14,13 @@
     - json
     - yaml
     - vue
-  description: Check code style with prettier
   additional_dependencies:
     - prettier@3.3.3
+  minimum_pre_commit_version: 3.0.0
 
 - id: eslint
   name: ESLint
+  description: Find and fix problmes in JavaScript code.
   entry: eslint
   language: node
   types_or:
@@ -27,18 +29,68 @@
     - ts
     - tsx
     - vue
-  description: Lint code with eslint
   additional_dependencies:
     - eslint@9.8.0
+  minimum_pre_commit_version: 3.0.0
 
 - id: vitest
   name: Vitest
+  description: A Vite-native testing framework.
   entry: vitest run
   language: node
   types:
     - text
   files: ^.+\.(?:jsx?|tsx?|vue|css|html)$|package\.json$
   pass_filenames: false
-  description: Run tests with vitest
   additional_dependencies:
     - vitest@2.0.5
+  minimum_pre_commit_version: 3.0.0
+
+- id: ruff-lint
+  name: Ruff Lint
+  description: Code Linter for Python.
+  entry: ruff check --force-exclude --no-fix
+  language: python
+  types_or:
+    - python
+    - pyi
+  additional_dependencies:
+    - ruff~=0.5.6
+  minimum_pre_commit_version: 3.0.0
+
+- id: ruff-fmt
+  name: Ruff Format
+  description: Code Formatter for Python.
+  entry: ruff format --force-exclude --check
+  language: python
+  types_or:
+    - python
+    - pyi
+  additional_dependencies:
+    - ruff~=0.5.6
+  minimum_pre_commit_version: 3.0.0
+
+- id: mypy
+  name: Mypy
+  description: Static Typing for Python.
+  entry: mypy
+  language: python
+  types_or:
+    - python
+    - pyi
+  additional_dependencies:
+    - mypy~=1.11.1
+  minimum_pre_commit_version: 3.0.0
+
+- id: pytest
+  name: Pytest
+  description: Test Framework for Python.
+  entry: pytest
+  language: python
+  types:
+    - text
+  files: ^.+\.py$|pyproject\.toml$
+  pass_filenames: false
+  additional_dependencies:
+    - pytest~=8.3.2
+  minimum_pre_commit_version: 3.0.0
