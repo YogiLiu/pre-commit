@@ -4,6 +4,8 @@
   language: golang
   types:
     - go
+    - go-mod
+    - go-sum
   description: Run gofmt on modified Go files
   stages:
     - pre-commit
