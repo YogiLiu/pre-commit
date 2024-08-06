@@ -30,3 +30,15 @@
   description: Lint code with eslint
   additional_dependencies:
     - eslint@9.8.0
+
+- id: vitest
+  name: Vitest
+  entry: vitest run
+  language: node
+  types:
+    - text
+  files: ^.+\.(?:jsx?|tsx?|vue|css|html)$|package\.json$
+  pass_filenames: false
+  description: Run tests with vitest
+  additional_dependencies:
+    - vitest@2.0.5
