@@ -29,4 +29,10 @@ repos:
       - id: ruff-fmt
       - id: mypy
       - id: pytest
+
+      # Go
+      - id: gofmt
+      - id: go-test
+      - id: go-vet
+      - id: goimports
 ```
