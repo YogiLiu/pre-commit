@@ -7,8 +7,6 @@
     - go-mod
     - go-sum
   description: Run gofmt on modified Go files
-  stages:
-    - pre-commit
 
 - id: prettier
   name: prettier
@@ -27,6 +25,4 @@
     - vue
   description: Check code style with prettier
   additional_dependencies:
-    - prettier@3.0.0
-  stages:
-    - pre-commit
+    - prettier@3.3.3
