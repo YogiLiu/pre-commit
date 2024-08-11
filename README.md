@@ -28,7 +28,6 @@ repos:
       - id: ruff-lint
       - id: ruff-fmt
       - id: mypy
-      - id: pytest
 
       # Go
       - id: gofmt
@@ -36,3 +35,25 @@ repos:
       - id: go-vet
       - id: goimports
 ```
+
+## Extra
+
+Since `pytest` cannot be define in third repo, there is a example for `pytest`:
+
+```yaml
+repos:
+  - repo: local
+    hooks:
+      - id: pytest
+        name: Pytest
+        description: Test Framework for Python.
+        entry: .venv/bin/pytest
+        language: system
+        types:
+          - text
+        files: ^.+\.py$|pyproject\.toml$
+        pass_filenames: false
+        minimum_pre_commit_version: 3.0.0
+```
+
+You can paste it to `.pre-commit-config.yaml`.
