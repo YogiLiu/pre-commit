@@ -17,7 +17,7 @@ Create a `.pre-commit-config.yaml` file in the project root and add the followin
 ```yaml
 repos:
   - repo: https://github.com/YogiLiu/pre-commit
-    rev: 0.2.0
+    rev: 0.4.1
     hooks:
       # Frontend
       - id: prettier
